@@ -1,7 +1,8 @@
-const Path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Path = require('path')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const LiveReloadPlugin = require('webpack-livereload-plugin')
 
 module.exports = {
   entry: {
@@ -23,7 +24,11 @@ module.exports = {
       patterns: [{ from: Path.resolve(__dirname, '../public'), to: 'public' }],
     }),
     new HtmlWebpackPlugin({
-      template: Path.resolve(__dirname, '../src/index.html'),
+      template: Path.resolve(__dirname, '../src/views/index.pug'),
+    }),
+    // Resolve pug live reload.
+    new LiveReloadPlugin({
+      appendScriptTag: true,
     }),
   ],
   resolve: {
@@ -39,13 +44,13 @@ module.exports = {
         type: 'javascript/auto',
       },
       {
-        test: /\.html$/i,
-        loader: 'html-loader',
+        test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
+        type: 'asset',
       },
       {
-        test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
-        type: 'asset'
+        test: /\.pug$/,
+        loader: 'pug-loader',
       },
     ],
   },
-};
+}
