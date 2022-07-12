@@ -1,3 +1,3 @@
-import '../styles/index.scss';
-
-console.log('webpack starterkit');
+import '../styles/index.scss'
+import 'bootstrap/js/dist/collapse'
+import 'bootstrap/js/dist/dropdown'

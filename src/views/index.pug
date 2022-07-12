@@ -1,9 +1,10 @@
-doctype html
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Pug Document
-  body 
-    h1 Pug Document
+extends layouts/_base.pug
+
+block seo
+    title Upfront | Free Bootstrap 5 Theme for Freelancer
+    meta(name="description", content="Upfront is a free Bootstrap 5 theme for freelancer")
+
+block variables
+    - let bodyClass = "page-home"
+
+block content

@@ -2,7 +2,6 @@
 $theme-pallete: ();
 
 // Custom spacers
-$spacer: 1rem;
 $gs-spacers: (
   4: $spacer * 1.5,
   5: $spacer * 2,
@@ -12,11 +11,3 @@ $gs-spacers: (
 );
 $spacers: map.merge($spacers, $gs-spacers);
 $gutters: map.merge($gutters, $gs-spacers);
-
-// Custom container
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1000px,
-);

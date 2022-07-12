@@ -1,0 +1,39 @@
+nav.nav.navbar.navbar-expand-lg.shadow-sm
+  .container-fluid
+    a.navbar-brand(href="#")
+      img.navbar-brand-logo(src="https://htmlstream.com/preview/front-v4.2/html/assets/svg/logos/logo.svg", alt="Logo")
+    button.navbar-toggler(
+      type="button",
+      data-bs-toggle="collapse",
+      data-bs-target="#navBar",
+      aria-controls="navBar",
+      aria-expanded="false",
+      aria-label="Toggle navigation"
+    )
+      span.navbar-toggler-icon
+
+    #navBar.collapse.navbar-collapse
+      ul.navbar-nav.me-auto.mb-2.mb-lg-0
+        li.nav-item
+          a.nav-link.fw-medium.text-uppercase.active(aria-current="page", href="#") Home
+        li.nav-item
+          a.nav-link.fw-medium.text-uppercase(href="#") About
+        li.nav-item.dropdown
+          a#navbarDropdown.nav-link.fw-medium.text-uppercase.dropdown-toggle(
+            href="#",
+            role="button",
+            data-bs-toggle="dropdown",
+            aria-expanded="false"
+          )
+            | Dropdown
+          ul.dropdown-menu(aria-labelledby="navbarDropdown")
+            li
+              a.dropdown-item.text-uppercase.fw-medium(href="#") Action
+            li
+              a.dropdown-item.text-uppercase.fw-medium(href="#") Another action
+            li
+              hr.dropdown-divider
+            li
+              a.dropdown-item.text-uppercase.fw-medium(href="#") Something else here
+        li.nav-item
+          a.nav-link.fw-medium.text-uppercase(href="#") Contact Us
