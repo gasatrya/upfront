@@ -4,13 +4,14 @@ $font-weight-medium: 500;
 // Boostrap variable overrides
 
 // Base
-$prefix: "ga-";
 $font-family-sans-serif: "Poppins", sans-serif;
 $font-weight-bolder: 900;
 $spacer: 1rem;
 
 // Colors
 $colors: ();
+$blue: #0d6efd;
+$primary: tint-color($blue, 20%);
 
 // Nav / Navbar
 $navbar-nav-link-padding-x: 1rem;
